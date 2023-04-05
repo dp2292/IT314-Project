@@ -30,7 +30,7 @@ const facultySchema = new mongoose.Schema({
     required: true,
   },
   experience: { //in years
-    type: Int16Array,
+    type: Number,
     required: true,
   },
   projects: {
@@ -51,4 +51,4 @@ const facultySchema = new mongoose.Schema({
  },
 });
 
-module.exports = mongoose.model("User", facultySchema);
+module.exports = mongoose.model("Faculties", facultySchema);

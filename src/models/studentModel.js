@@ -27,4 +27,4 @@ const studentSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("User", studentSchema);
+module.exports = mongoose.model("Students", studentSchema);
