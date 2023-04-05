@@ -32,8 +32,24 @@ const userSchema = new mongoose.Schema({
   experience: { //in years
     type: Int16Array,
     required: true,
-  }
-  
+  },
+  projects: {
+    type: [String],
+    required: true,
+  },
+  Awards_and_Honors: {
+    type: [String],
+    required: true,
+ },
+ Industrial_experience:{
+    type: [String],
+    required: true,
+ },
+ Publications: {
+    type: [String],
+    required: true,
+ },
+
 });
 
 module.exports = mongoose.model("User", userSchema);
