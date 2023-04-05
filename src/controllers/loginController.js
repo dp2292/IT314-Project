@@ -1,10 +1,10 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-const studentCollection = require('../models/userModel')
+const studentCollection = require('../models/studentModel')
 
 module.exports = function (req, res) {
-    userCollection.findOne(
+    studentCollection.findOne(
         { _id: req.body.userEmail, password: req.body.password },
         function (err, user) {
             if (user) {
@@ -13,7 +13,6 @@ module.exports = function (req, res) {
                     { userId: user._id, role: user.role },
                     process.env.ACESS_TOKEN_SECRET
                 );
-
                 // Send the JWT as a response to the client
                 res.status(200).json({ token });
             } else {
