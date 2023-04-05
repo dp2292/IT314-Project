@@ -1,7 +1,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-const userCollection = require('../models/userModel')
+const studentCollection = require('../models/userModel')
 
 module.exports = function (req, res) {
     userCollection.findOne(
